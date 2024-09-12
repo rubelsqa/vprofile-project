@@ -8,9 +8,13 @@ pipeline {
         NEXUS_URL = "nexus.gulpco.net"
         NEXUSPORT = "443"
         NEXUS_REPOSITORY = "vprofile-release"
-        NEXUS-GRP-REPO = "vpro-maven-group"
+        NEXUS_GRP_REPO = "vpro-maven-group"
+        CENTRAL_REPO = "vpro-maven-central"
+        RELEASE_REPO = "vprofile-release"
+        SNAP_REPO = "vprofile-snapshot"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
+
     }
     
     stages {

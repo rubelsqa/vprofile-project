@@ -5,22 +5,22 @@
 
   <servers>
     <server>
-      <id>${SNAP-REPO}</id>
+      <id>${SNAP_REPO}</id>
       <username>${NEXUS-USER}</username>
       <password>${NEXUS-PASS}</password>
     </server>
     <server>
-      <id>${RELEASE-REPO}</id>
+      <id>${RELEASE_REPO}</id>
       <username>${NEXUS-USER}</username>
       <password>${NEXUS-PASS}</password>
     </server>
         <server>
-        <id>${CENTRAL-REPO}</id>
+        <id>${CENTRAL_REPO}</id>
       <username>${NEXUS-USER}</username>
       <password>${NEXUS-PASS}</password>
     </server>
     <server>
-        <id>${NEXUS-GRP-REPO}</id>
+        <id>${NEXUS_GRP_REPO}</id>
       <username>${NEXUS-USER}</username>
       <password>${NEXUS-PASS}</password>
     </server>
@@ -30,7 +30,7 @@
     <mirror>
       <id>${CENTRAL-REPO}</id>
       <name>${CENTRAL-REPO}</name>
-      <url>${NEXUS_PROTOCOL}://${NEXUS_URL}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
+      <url>${NEXUS_PROTOCOL}://${NEXUS_URL}:${NEXUSPORT}/repository/${NEXUS_GRP_REPO}/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
