@@ -10,11 +10,7 @@ pipeline {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "https"
         NEXUS_URL = "nexus.gulpco.net"
-<<<<<<< HEAD
         NEXUSPORT = "443"
-=======
-        NEXUSPOR = "443"
->>>>>>> ca6da90b4b47a0148607180c6d2ff7cd7a09154e
         NEXUS_REPOSITORY = "vprofile-release"
 	    NEXUS_REPOGRP_ID    = "vpro-maven-group"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
