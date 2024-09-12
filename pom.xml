@@ -211,7 +211,7 @@
 	<repositories>
     <repository>
       <id>${NEXUS_GRP_REPO}</id>
-      <url>${NEXUS_PROTOCOL}://${NEXUS_URL}:${NEXUSPORT}/repository/${NEXUS_GRP_REPO}/</url>
+      <url>${NEXUS_PROTOCOL}://${NEXUS_URL}/repository/${NEXUS_GRP_REPO}/</url>
     </repository>
   </repositories>
 </project>
