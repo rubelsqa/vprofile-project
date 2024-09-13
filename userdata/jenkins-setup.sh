@@ -18,7 +18,7 @@ sleep 30
 sudo systemctl stop jenkins
 sleep 30
 cd /var/lib/
-sudo rm -rf /var/lib/Jenkins
+sudo rm -rf /var/lib/jenkins
 sudo aws s3 cp s3://cicd-data-vprofile/jenkins_backup.tar.gz /var/lib/
 sudo tar xzvf jenkins_backup.tar.gz
 sudo rm -rf /var/lib/jenkins_backup.tar.gz
