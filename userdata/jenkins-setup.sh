@@ -2,6 +2,7 @@
 sudo apt update -y
 sudo apt install openjdk-11-jdk -y
 sudo apt install maven wget unzip -y
+sudo apt install nodejs -y
 cd /tmp
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
