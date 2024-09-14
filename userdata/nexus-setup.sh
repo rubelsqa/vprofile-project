@@ -66,6 +66,7 @@ sudo rm -rf /opt/nexus
 sudo aws s3 cp s3://cicd-data-vprofile/nexus_backup.tar.gz /opt/
 sleep 10
 sudo tar xzvf nexus_backup.tar.gz
-sudo rm -rf /opt/nexus_backup.tar.gz
+sleep 10
+#sudo rm -rf /opt/nexus_backup.tar.gz
 sudo chown nexus.nexus /opt/nexus -R
 sudo systemctl start nexus
