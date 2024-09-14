@@ -51,7 +51,20 @@ echo 'run_as_user="nexus"' | sudo tee /opt/nexus/$NEXUSDIR/bin/nexus.rc
 
 # Reload systemd, start and enable Nexus service
 sudo systemctl daemon-reload
-sudo systemctl start nexus
 sudo systemctl enable nexus
 
-echo "Nexus setup complete and running on systemd."
+# Restore Backup from S3
+sudo apt install maven wget unzip -y
+cd /tmp
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+cd ~
+sudo apt-get update
+cd /opt/
+sudo rm -rf /opt/nexus
+sudo aws s3 cp s3://cicd-data-vprofile/nexus_backup.tar.gz /opt/
+sudo tar xzvf nexus_backup.tar.gz
+sudo rm -rf /opt/nexus_backup.tar.gz
+sudo chown nexus.nexus /opt/nexus -R
+sudo systemctl start nexus
